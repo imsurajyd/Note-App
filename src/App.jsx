@@ -71,7 +71,7 @@ export default function App() {
   <div className="flex flex-col lg:flex-row lg:h-[95vh] rounded-3xl bg-white overflow-hidden">
     
     {/* Sidebar */}
-    <div className="w-full lg:w-[120px] border-b lg:border-b-0 lg:border-r border-gray-200 px-4 py-6 flex lg:block items-center justify-between">
+    <div className="w-full lg:w-30 border-b lg:border-b-0 lg:border-r border-gray-200 px-4 py-6 flex lg:block items-center justify-between">
       
       <h1 className="text-xl md:text-2xl font-semibold text-gray-800">
         Notes
@@ -89,7 +89,7 @@ export default function App() {
     <form
       onSubmit={formHandler}
       style={{ display: !create ? "none" : "flex" }}
-      className="absolute left-1/2 top-1/2 z-50 w-[90%] max-w-[500px] -translate-x-1/2 -translate-y-1/2 flex-col items-center rounded-xl bg-white p-5 md:p-10 shadow-[0_0_20px_rgba(0,0,0,0.25)]"
+      className="absolute left-1/2 top-1/2 z-50 w-[90%] max-w-125 -translate-x-1/2 -translate-y-1/2 flex-col items-center rounded-xl bg-white p-5 md:p-10 shadow-[0_0_20px_rgba(0,0,0,0.25)]"
     >
       <h1 className="mb-6 text-center text-2xl md:text-4xl font-bold text-gray-800">
         Create Note
@@ -134,14 +134,14 @@ export default function App() {
           <div
             key={idx}
             style={{ backgroundColor: note.color }}
-            className="relative h-[280px] w-full sm:w-[260px] rounded-xl px-5 py-4"
+            className="relative h-70 w-full sm:w-65 rounded-xl px-5 py-4"
           >
             {/* Title */}
-            <h2 className="max-w-[190px] text-lg md:text-[20px] font-medium leading-7 text-[#2D2D2D]">
+            <h2 className="max-w-47.5 text-lg md:text-[20px] font-medium leading-7 text-[#2D2D2D]">
               {note.heading}
             </h2>
 
-            <p className="mt-2 text-sm md:text-base break-words">
+            <p className="mt-2 text-sm md:text-base wrap-break-word">
               {note.note}
             </p>
 
